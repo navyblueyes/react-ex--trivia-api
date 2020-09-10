@@ -35,6 +35,7 @@ export default function App() {
   function handleClickedQ(answer) {
     const isAnswerCorrect = answer === question.correct_answer;
     setIsCorrect(isAnswerCorrect);
+
   };
 
 
@@ -53,7 +54,7 @@ export default function App() {
       {/* question header ----------------------- */}
       <div className="question-header">
         <CategorySelector category={selectedCategory} chooseCategory={setSelectedCategory} />
-        <Scoreboard />
+        <Scoreboard isCorrect={isCorrect}/>
       </div>
 
       {/* the question itself ----------------------- */}

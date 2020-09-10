@@ -5,7 +5,7 @@ export default function ResultModal({isCorrect, question, getQuestion}) {
     <div className={`result-modal ${isCorrect ? 'is-correct' : 'is-wrong'}`}>
       <div className="overlay" />
       <div className="result-modal-content">
-        {isCorrect.isCorrect && 
+        {isCorrect && 
           (<h3>
             👊👊👊
             <br />
@@ -13,7 +13,7 @@ export default function ResultModal({isCorrect, question, getQuestion}) {
           </h3>)
         }
 
-        {!isCorrect.isCorrect && 
+        {!isCorrect && 
           (<h3>
             😟😢😟
             <br />
@@ -21,7 +21,7 @@ export default function ResultModal({isCorrect, question, getQuestion}) {
           </h3>)
         }  
 
-        {!isCorrect.isCorrect && 
+        {!isCorrect && 
           (<div className="correct-answer">
             <small>The correct answer was:</small>
             <br />

@@ -15,10 +15,10 @@ export default function Question( {question, answerQuestion }) {
   ]);
   return (
     <div className="question">
-      <h2>{decodeHTML(question.question)}</h2>
+      <h2 dangerouslySetInnerHTML={{ __html: question.question }} />
 
       {answers.map((answer, index) => (
-        <button key={index} onClick={() => answerQuestion(answer)}>{answer}</button>
+        <button key={index} onClick={() => answerQuestion(answer)} dangerouslySetInnerHTML={{ __html: answer }}/>
       ))}
     </div>
   );
